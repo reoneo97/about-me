@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter: Minimal Blog
+  Reo's Page
 </h1>
 
 <p align="center">
@@ -22,23 +22,7 @@
   </a>
 </p>
 
-Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting. Using the Gatsby Theme [`@lekoarts/gatsby-theme-minimal-blog`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog).
-
-[**Demo Website**](https://minimal-blog.lekoarts.de)
-
-Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter).
-
-## ✨ Features
-
-- MDX
-- Fully customizable through the usage of Gatsby Themes (and Theme UI)
-- Light Mode / Dark Mode
-- Typography driven, minimal style
-- Tags/Categories support
-- Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer). Also allows adding line numbers, line highlighting, language tabs, and file titles.
-- RSS Feed for blog posts
-- SEO (Sitemap, OpenGraph tags, Twitter tags)
-- WebApp Manifest
+This repository contains the code for my personal portfolio page. Portfolio page was built using Gatsby and deployed on Netlify. The [Minimal Blog](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog) Gatsby theme was used as a starter for this project.
 
 ## ⏱️ Quick Start
 
@@ -221,9 +205,3 @@ To learn more about Gatsby themes specifically, I recommend checking out the [th
 - **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _How-to Guides_ and _Reference_ items in the primary navigation.
-
-## 🌟 Supporting me
-
-Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
-
-Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)!
