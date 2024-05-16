@@ -24,6 +24,13 @@
 
 This repository contains the code for my personal portfolio page. Portfolio page was built using Gatsby and deployed on Netlify. The [Minimal Blog](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog) Gatsby theme was used as a starter for this project.
 
+
+
+## TODO:
+- Add section on Projects
+  - To display project items as a card - Learn some GraphQL and understand how to render things different compared to blog posts
+- Add in content about OMSCS
+
 ## ⏱️ Quick Start
 
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
