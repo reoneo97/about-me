@@ -1,5 +1,5 @@
 ---
-title: CS6200 Graduate Introduction to Operating Systems - Review
+title: OMSCS Module Review - CS6200 Graduate Introduction to Operating Systems (GIOS)
 date: 2024-05-20
 tags:
   - OMSCS
@@ -7,8 +7,69 @@ tags:
 
 > Module was taken in the Fall 23 Semester
 
+
+#### Rationale?
+I took GIOS because I felt that I didn't fully understand what goes. A software engineer friend of mine also heavily recommended it. His rationale was that there were many code optimizations that can be done at the OS level and understanding it will make you a better developer.
+
+
+## Content
+
+The are several modules. 
+
+The first part introduces the different components of an OS which enables everything that we do on the computer. This means understanding things like the Kernel, Processes, CPU Cores, Threads and also the underlying data structures in the software which represent what they are doing. 
+
+
+
+The next part looks at Interprocess Communication (IPC)
+ Kernel, the difference between User Level functions and Privileged or Kernel level functions. The lectures go into what 
+
+
+
+Biggest Takeaways
+- Appreciate all the quality of life stuff that Python provides that C does not. Pointer management, OOP etc. 
+- Principles behind coordination for multithreaded applications, how Mutexes work and why they are necessary for multithreaded 
+- A good primer on Distributed Networks for Memory and Compute. Principles behind Hadoop and Cloud Technologies
+
+
+Recommendations
+- If you have no experience with C, do start learning it. Personally, I felt the C assignments to be considerably harder than the C++ one (Project 4). This means learning tools such as GDB as well to debug C programmes and fixing memory leaks 
+- Configure VSCode  
+- Start on the projects very early, they take a lot of time to complete and because most of them are multithreaded, passing the test cases once does not represent program correctness 
+- 
+
+## Project 1
+
+Project 1 involves builds up to a multi-threaded client-server GetFile Server. Essentially it allows a client process to request files from a server and this communication is done using sockets. 
+
+First part of the project invovles performing some simple warm up with getting two different sockets to send messages (Hello World) to each other. Subsequently
+
+
+For the GetFile component, . 
+- Implement API to do it
+- Invovles Request Parsing and understanding how to coordinate the sending/receiving of data since sockets have a fixed buffer size for sending data
+- Because the file sizes are all different, 
+
+
+In the multithreaded part, both client/servers are able to send/receive requests from different files at once. This involves using the Linux Pthreads library to spin off threads, and how these threads are coordinated
+
+Understanding what goes beneath the hood when we call async and o
+Working with files and sockets
+
+
 ## TLDR:
 Workload: ~22 hours/week
+Pretty good module for someone who is new to CS. Projects are extremely difficult but pretty rewarding to finish.
+
+
+## Project 1
+
+One tip for new 
+
+## Project 3
+
+## Project 4
+
+
 
 I came into this module expecting quite a bit of difficulty
 
@@ -20,3 +81,5 @@ I came into this module expecting quite a bit of difficulty
 Project 1: 100/100 
 Project 3: 100/100
 Project 4: 100/100
+
+Overall A: 89/100 (I think the cut off was 84 for my batch)
