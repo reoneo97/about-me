@@ -8,13 +8,20 @@ tags:
 > Module was taken in the Fall 23 Semester
 
 
+
+## TLDR:
+Workload: ~22 hours/week
+Pretty good module for someone who is new to CS. Projects are extremely difficult but pretty rewarding to finish.
+
+
 #### Rationale?
-I took GIOS because I felt that I didn't fully understand what goes. A software engineer friend of mine also heavily recommended it. His rationale was that there were many code optimizations that can be done at the OS level and understanding it will make you a better developer.
+I took GIOS because I felt that I didn't fully understand what goes. A software engineer friend of mine also heavily recommended it. His rationale was that there were many code optimizations that can be done at the Operating System (OS) level and understanding it will make you a better developer.
 
 
 ## Content
 
-The are several modules. 
+Essentially, the OS manages many of the physical resources located on a computers. This management process involves compartmentalization (prevent different processes from overwriting each other) and also communication.
+
 
 The first part introduces the different components of an OS which enables everything that we do on the computer. This means understanding things like the Kernel, Processes, CPU Cores, Threads and also the underlying data structures in the software which represent what they are doing. 
 
@@ -23,23 +30,23 @@ The first part introduces the different components of an OS which enables everyt
 The next part looks at Interprocess Communication (IPC)
  Kernel, the difference between User Level functions and Privileged or Kernel level functions. The lectures go into what 
 
+Lastly, the module introduces topics on virtualization, cloud computing and distributed computing. It goes through some of the principles behind how clusters are able to divide up tasks 
 
 
-Biggest Takeaways
-- Appreciate all the quality of life stuff that Python provides that C does not. Pointer management, OOP etc. 
-- Principles behind coordination for multithreaded applications, how Mutexes work and why they are necessary for multithreaded 
-- A good primer on Distributed Networks for Memory and Compute. Principles behind Hadoop and Cloud Technologies
 
 
-Recommendations
+
+
+
+## Recommendations
 - If you have no experience with C, do start learning it. Personally, I felt the C assignments to be considerably harder than the C++ one (Project 4). This means learning tools such as GDB as well to debug C programmes and fixing memory leaks 
 - Configure VSCode  
 - Start on the projects very early, they take a lot of time to complete and because most of them are multithreaded, passing the test cases once does not represent program correctness 
-- 
+
 
 ## Project 1
 
-Project 1 involves builds up to a multi-threaded client-server GetFile Server. Essentially it allows a client process to request files from a server and this communication is done using sockets. 
+The main product from Project 1 is to implement a multithreaded GetFile Client-Server. The client requests for a file from the Server which will parse the request and either send an error message or the file contents in bytes. All of this communicatiion is done via sockets  
 
 First part of the project invovles performing some simple warm up with getting two different sockets to send messages (Hello World) to each other. Subsequently
 
@@ -50,36 +57,45 @@ For the GetFile component, .
 - Because the file sizes are all different, 
 
 
-In the multithreaded part, both client/servers are able to send/receive requests from different files at once. This involves using the Linux Pthreads library to spin off threads, and how these threads are coordinated
-
-Understanding what goes beneath the hood when we call async and o
-Working with files and sockets
+The final section involves upgrading the client and server to both be multithreaded allowing for multiple requests to be handled concurrently. For this, the Linux PThreads library is used to  spin off threads all of which are coordinated by the program.
 
 
-## TLDR:
-Workload: ~22 hours/week
-Pretty good module for someone who is new to CS. Projects are extremely difficult but pretty rewarding to finish.
+Debugging multiple threads in the same program posed its own challenges
 
-
-## Project 1
-
-One tip for new 
+Overall it was pretty challenging, 
 
 ## Project 3
 
+This project is on Interprocess Communication (IPC) specifically the Shared Memory IPC. This is when a memory buffer is mounted to 2 different processes and they are able to transmit data via the shared memory. Unlike sockets, it takes more resources to initialize but requires fewer computation to pass data compared to using messages/sockets.
+
+
+To succesfully implement the program, semaphore and message queues had to be used to synchronize the different processes. 
+
+
+Personally this was the hardest project and it was quite difficult to design how the synchronization mechanisms for the different processes. The shared memory API and the intricacies of transferring data also posed a challenge. Like the other projects, start early on this one!
 ## Project 4
 
+Project 4 involves using Remote Procedure Calls (RPC) to implemente a distributed file server. This is done using gRPC, a google RPC library and its the first project in C++.
 
 
+The first part involves implementing RPC functions to upload/download files and implement other functions for the application to work correctly.
+
+Protobuf API was well documented, gRPC had some useful C++ examples to follow.  
 I came into this module expecting quite a bit of difficulty
 
+Maybe its the trial-by-fire of the other projects or comparative ease of using C++ but I felt Project 4 to be the easiest one. It was also the most guided project which made it less frustrating. Biggest difficulty I faced was understanding the project code as there were many functions that were not implemented but had to be understood.
 
 
-
-
+## Biggest Takeaways
+- Better understanding of how web servers work and the optimizations that are done based on the expected workload. 
+- Principles behind coordination for multithreaded applications, how Mutexes work and why they are necessary for multithreaded 
+- A good primer on Distributed Networks for Memory and Compute. Principles behind Hadoop and Cloud Technologies
 ## Grades
 Project 1: 100/100 
 Project 3: 100/100
 Project 4: 100/100
 
-Overall A: 89/100 (I think the cut off was 84 for my batch)
+Midterm: 84/100
+Final: 75/100
+
+Overall A: 89.8/100 (I think the cut off was 84 for my batch)
